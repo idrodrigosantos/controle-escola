@@ -1,0 +1,52 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input type="url" name="avatar_url" placeholder="http://" value="{{ student.avatar_url }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome Completo</div>
+    <div>
+        <input type="text" name="name" placeholder="Nome do Aluno" value="{{ student.name }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input type="date" name="birth" value="{{ student.birth }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>E-mail</div>
+    <div>
+        <input type="email" name="email" value="{{ student.email }}">
+    </div>
+</div>
+
+<div class="item">
+    <div>Ano Escolar</div>
+    <div>
+        <select type="select" name="school_year">
+            <option value="5EF" {% if student.school_year == "5EF" %} selected="selected" {% endif %}>5º ano ensino fundamental</option>
+            <option value="6EF" {% if student.school_year == "6EF" %} selected="selected" {% endif %}>6º ano ensino fundamental</option>
+            <option value="7EF" {% if student.school_year == "7EF" %} selected="selected" {% endif %}>7º ano ensino fundamental</option>
+            <option value="8EF" {% if student.school_year == "8EF" %} selected="selected" {% endif %}>8º ano ensino fundamental</option>
+            <option value="9EF" {% if student.school_year == "9EF" %} selected="selected" {% endif %}>9º ano ensino fundamental</option>
+            <option value="1EM" {% if student.school_year == "1EM" %} selected="selected" {% endif %}>1º ano ensino médio</option>
+            <option value="2EM" {% if student.school_year == "2EM" %} selected="selected" {% endif %}>2º ano ensino médio</option>
+            <option value="3EM" {% if student.school_year == "3EM" %} selected="selected" {% endif %}>3º ano ensino médio</option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Carga Horária Semanal</div>
+    <div>
+        <input type="number" name="workload" value="{{ student.workload }}">
+    </div>
+</div>
+
+<button type="submit">Salvar</button>

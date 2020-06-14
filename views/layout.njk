@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {% block head %}
+            <title>Controle de Escola</title>
+        {% endblock %}
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="/teachers">Professores</a>
+                <a href="/students">Alunos</a>
+            </nav>
+        </header>
+
+        {% block content %}{% endblock %}
+
+        <script src="/js/scripts.js"></script>
+    </body>
+
+</html>

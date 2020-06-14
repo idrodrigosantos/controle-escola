@@ -1,0 +1,57 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <div class="card">
+        <section class="avatar" style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover"></section>
+
+        <section class="details">
+            <h3>Detalhes</h3>
+
+            <div class="item">
+                <div>Nome Completo</div>
+                <div>{{ teacher.name }}</div>
+            </div>
+
+            <div class="item">
+                <div>Idade</div>
+                <div>{{ teacher.age }}</div>
+            </div>
+
+            <div class="item">
+                <div>Grau de escolaridade</div>
+                <div>{{ teacher.level_degree }}</div>
+            </div>
+
+            <div class="item">
+                <div>Tipo de aula</div>
+                <div>{{ "Presencial" if teacher.type == "P" else "À distância" }}</div>
+            </div>
+
+            <div class="item">
+                <div>Acompanhamento</div>
+                <div>
+                    {% for occupation in teacher.occupations %}
+                        <span>{{ occupation }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Desde</div>
+                <div>{{ teacher.created_at }}</div>
+            </div>
+
+            <div class="group-buttons">
+                <a href="/teachers/{{teacher.id}}/edit" class="button-edit">Editar</a>
+
+                <form id="form-delete" method="POST" action="/teachers?_method=DELETE">
+                    <button type="submit">Deletar</button>
+
+                    <input type="hidden" name="id" value="{{ teacher.id }}">
+                </form>
+            </div>
+        </section>
+    </div>
+
+    {% include "confirm.njk" %}
+{% endblock %}
