@@ -19,18 +19,18 @@
 
             <div class="item">
                 <div>Grau de escolaridade</div>
-                <div>{{ teacher.level_degree }}</div>
+                <div>{{ teacher.graduation }}</div>
             </div>
 
             <div class="item">
                 <div>Tipo de aula</div>
-                <div>{{ "Presencial" if teacher.type == "P" else "À distância" }}</div>
+                <div>{{ "Presencial" if teacher.class_type == "P" else "À distância" }}</div>
             </div>
 
             <div class="item">
                 <div>Acompanhamento</div>
                 <div>
-                    {% for occupation in teacher.occupations %}
+                    {% for occupation in teacher.subjects_taught %}
                         <span>{{ occupation }}</span>
                     {% endfor %}
                 </div>

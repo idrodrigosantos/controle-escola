@@ -290,3 +290,78 @@ tbody tr td:last-child a, .table-container>a {
     margin-bottom: 16px;
     display: inline-block;
 }
+
+/* Filters */
+
+.table-container .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.table-container .header a {
+    margin: 0;
+    width: 33px;
+}
+
+.table-container .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-container .header form input {
+    border: 1px solid #eeeeee;
+    padding: 4px 8px;
+    box-sizing: border-box;
+}
+
+.table-container .header form button {
+    margin: 0;
+}
+
+/* Botão create teacher */
+
+.table-container .header #button-filter {
+    margin-bottom: 16px;
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+/* Pagination */
+
+.table-container {
+    display: grid;
+    /* rows / columns */
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+    margin: 0;
+    align-self: start;
+}
+
+.table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.pagination a, .pagination span {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pagination a:hover {
+    filter: brightness(0.3);
+    border-bottom: 1px solid var(--primary-color);
+}
