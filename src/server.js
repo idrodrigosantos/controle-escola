@@ -25,18 +25,13 @@ server.use(routes);
 
 // Configuração do nunjucks
 server.set('view engine', 'njk');
-nunjucks.configure('views', {
+nunjucks.configure('src/app/views', {
     express: server,
     // Não faz cache no navegador
     noCache: true
 });
 
-// Rota para Erro 404
-server.use(function (req, res) {
-    res.status(404).render('not-found');
-});
-
-// Inicia o servidor
+// Inicia o servidor na porta 5000
 server.listen(5000, function () {
     console.log('Server is running.')
 });

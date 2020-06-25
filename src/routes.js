@@ -3,8 +3,8 @@ const express = require('express');
 const routes = express.Router();
 
 // Importa os controllers
-const teachers = require('./controllers/teachers');
-const students = require('./controllers/students');
+const teachers = require('./app/controllers/teachers');
+const students = require('./app/controllers/students');
 
 // Rota inicial
 routes.get('/', function (req, res) {

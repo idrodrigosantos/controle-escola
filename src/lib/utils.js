@@ -1,5 +1,5 @@
 module.exports = {
-    age: function (timestamp) {
+    age(timestamp) {
         const today = new Date();
         const birthDate = new Date(timestamp);
 
@@ -12,7 +12,7 @@ module.exports = {
 
         return age;
     },
-    date: function (timestamp) {
+    date(timestamp) {
         const date = new Date(timestamp);
 
         // Ano
@@ -32,21 +32,22 @@ module.exports = {
             month,
             year,
             iso: `${year}-${month}-${day}`,
-            birthDay: `${day}/${month}`
+            birthDay: `${day}/${month}`,
+            format: `${day}/${month}/${year}`
         }
     },
-    graduation: function (degree) {
-        if (degree == 'medio') {
+    graduation(education_level) {
+        if (education_level == 'medio') {
             return 'Ensino Médio Completo';
-        } else if (degree == 'superior') {
+        } else if (education_level == 'superior') {
             return 'Ensino Superior Completo';
-        } else if (degree == 'mestrado') {
+        } else if (education_level == 'mestrado') {
             return 'Mestrado';
-        } else if (degree == 'doutorado') {
+        } else if (education_level == 'doutorado') {
             return 'Doutorado';
         }
     },
-    grade: function (school_year) {
+    grade(school_year) {
         if (school_year == '5EF') {
             return '5º ano ensino fundamental';
         } else if (school_year == '6EF') {
