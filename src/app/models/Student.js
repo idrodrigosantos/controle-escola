@@ -1,7 +1,7 @@
 // Utils
 const { date } = require('../../lib/utils');
 
-// Importa a conexação com o banco de dados
+// Importa a conexão com o banco de dados
 const db = require('../../config/db');
 
 module.exports = {

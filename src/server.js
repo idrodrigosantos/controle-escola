@@ -33,5 +33,5 @@ nunjucks.configure('src/app/views', {
 
 // Inicia o servidor na porta 5000
 server.listen(5000, function () {
-    console.log('Server is running.')
+    console.log('Server is running.');
 });
