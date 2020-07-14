@@ -104,6 +104,7 @@ nav a:hover::after {
         opacity: 0;
         transform: translateY(15px);
     }
+
     to {
         opacity: 1;
     }
@@ -124,7 +125,8 @@ nav a:hover::after {
     border: none;
 }
 
-.details h3, .details .item div:nth-child(1) {
+.details h3,
+.details .item div:nth-child(1) {
     font-size: 14px;
     line-height: 24px;
     color: #777777;
@@ -241,11 +243,13 @@ button[type="submit"] {
     border-spacing: 0;
 }
 
-.table-container thead tr th, .table-container tbody tr td {
+.table-container thead tr th,
+.table-container tbody tr td {
     text-align: center;
 }
 
-td, th {
+td,
+th {
     padding: 16px;
     border-bottom: 1px solid #d9d9d9;
 }
@@ -276,7 +280,8 @@ tbody tr td:first-child span {
     border: 2px solid white;
 }
 
-tbody tr td:last-child a, .table-container>a {
+tbody tr td:last-child a,
+.table-container>a {
     background-color: var(--primary-color);
     padding: 8px 16px;
     text-decoration: none;
@@ -355,7 +360,8 @@ tbody tr td:last-child a, .table-container>a {
     justify-self: center;
 }
 
-.pagination a, .pagination span {
+.pagination a,
+.pagination span {
     color: var(--primary-color);
     text-decoration: none;
     margin-right: 16px;
