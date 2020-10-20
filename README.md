@@ -50,6 +50,8 @@ $ npm start
 * JavaScript
 * Node.js
 * PostgreSQL
+* Nunjucks
+* Express.js
 
 ## Dependências
 
