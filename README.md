@@ -12,7 +12,7 @@ Sistema para controle de escola.
 
 ```bash
 # Clone o repositório
-$ git clone https://github.com/imsantosrodrigo/controle-escola.git
+$ git clone https://github.com/idrodrigosantos/controle-escola.git
 
 # Acesse o diretório
 $ cd controle-escola
